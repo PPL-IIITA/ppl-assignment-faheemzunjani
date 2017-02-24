@@ -1,8 +1,8 @@
 #include <cstdio>
 #include "utility.hpp"
 
-void utility::read_boys_data(char file_name[100], vector <geek_boy> geek, 
-					vector <generous_boy> generous, vector <miser_boy> miser)
+void utility::read_boys_data(vector <geek_boy> geek, vector <generous_boy> generous, 
+					vector <miser_boy> miser)
 {
 	FILE * fptr;
 	std::string name, type;
@@ -10,7 +10,7 @@ void utility::read_boys_data(char file_name[100], vector <geek_boy> geek,
 	int attract, min_attract_req, intel;
 	double budg;
 
-	fptr = fopen(file_name, "r");
+	fptr = fopen("./Data/boys.csv", "r");
 
 	while (!feof(fptr)) {
 		fscanf(fptr, "%s,%d,%d,%lf,%d,%s", name_in, &attract, &min_attract_req, 
@@ -34,8 +34,8 @@ void utility::read_boys_data(char file_name[100], vector <geek_boy> geek,
 	fclose(fptr);
 }
 
-void utility::read_girls_data(char file_name[100], vector <normal_girl> normie, 
-						 vector <choosy_girl> choosy, vector <desperate_girl> despo)
+void utility::read_girls_data(vector <normal_girl> normie, vector <choosy_girl> choosy, 
+					 vector <desperate_girl> despo)
 {
 	FILE * fptr;
 	char name_in[100], type_in[100];
@@ -44,7 +44,7 @@ void utility::read_girls_data(char file_name[100], vector <normal_girl> normie,
 	double maint_cost;
 	char crit;
 
-	fptr = fopen(file_name, "r");
+	fptr = fopen("./Data/girls.csv", "r");
 
 	while (!feof(fptr)) {
 		fscanf(fptr, "%s,%d,%lf,%d,%c,%s", name_in, &attract, &maint_cost, 
@@ -66,4 +66,9 @@ void utility::read_girls_data(char file_name[100], vector <normal_girl> normie,
 	}
 
 	fclose(fptr);
+}
+
+void utility::print_couples()
+{
+
 }

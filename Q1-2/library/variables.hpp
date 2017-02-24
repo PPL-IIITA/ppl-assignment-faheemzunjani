@@ -9,6 +9,8 @@
 #include "essential_gift.hpp"
 #include "utility_gift.hpp"
 
+using namespace data;
+
 vector <geek_boy> geek_boys; 
 vector <generous_boy> generous_boys; 
 vector <miser_boy> miser_boys; 

@@ -1,6 +1,6 @@
-#include "./Library/utility.hpp"
-#include "./Library/algorithms.hpp"
-#include "./Library/variables.hpp"
+#include "./librarytest/utility.hpp"
+#include "./librarytest/algorithms.hpp"
+#include "./librarytest/variables.hpp"
 
 int main(int argc, char ** argv)
 {
