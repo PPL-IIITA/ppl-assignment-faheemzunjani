@@ -1,3 +1,6 @@
+#ifndef ESSENTIAL_GIFT_H
+#define ESSENTIAL_GIFT_H
+
 namespace data {
 	class essential_gift {
 		private:
@@ -9,5 +12,7 @@ namespace data {
 			float get_price();
 			int get_value();
 
-	}
+	};
 }
+
+#endif

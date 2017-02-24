@@ -1,3 +1,5 @@
+#ifndef UTILITY_GIFT_H
+#define UTILITY_GIFT_H
 #include <string>
 
 namespace data {
@@ -11,9 +13,11 @@ namespace data {
 		public:
 			utility_gift(float price, int value, int utility_value, 
 						 std::string utility_class);
-			float utility_gift::get_price();
-			int utility_gift::get_value();
-			int utility_gift::get_utility_value();
-			std::string utility_gift::get_utility_class();
-	}
+			float get_price();
+			int get_value();
+			int get_utility_value();
+			std::string get_utility_class();
+	};
 }
+
+#endif

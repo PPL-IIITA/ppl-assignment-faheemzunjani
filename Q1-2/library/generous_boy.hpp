@@ -1,3 +1,6 @@
+#ifndef GENEROUS_BOY_H
+#define GENEROUS_BOY_H
+
 #include <string>
 
 namespace data {
@@ -23,3 +26,5 @@ namespace data {
             int can_commit(double maintainance_cost, int attractiveness);
     };
 }                
+
+#endif

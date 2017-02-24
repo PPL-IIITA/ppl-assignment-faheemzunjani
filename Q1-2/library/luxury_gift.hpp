@@ -1,3 +1,6 @@
+#ifndef LUXURY_GIFT_H
+#define LUXURY_GIFT_H
+
 namespace data {
 	class luxury_gift {
 		private:
@@ -12,5 +15,7 @@ namespace data {
 			int get_value();
 			int get_rating();
 			int get_difficulty();
-	}
+	};
 }
+
+#endif

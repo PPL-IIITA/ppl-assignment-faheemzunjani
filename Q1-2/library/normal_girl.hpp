@@ -1,3 +1,5 @@
+#ifndef NORMAL_GIRL_H
+#define NORMAL_GIRL_H
 #include <string>
 
 namespace data {
@@ -22,3 +24,5 @@ namespace data {
             int can_commit(double budget);
     };
 }                
+
+#endif

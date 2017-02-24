@@ -1,3 +1,5 @@
+#ifndef MISER_BOY_H
+#define MISER_BOY_H
 #include <string>
 
 namespace data {
@@ -23,3 +25,5 @@ namespace data {
             int can_commit(double maintainance_cost, int attractiveness);
     };
 }                
+
+#endif
