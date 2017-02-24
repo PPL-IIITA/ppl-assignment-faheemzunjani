@@ -2,8 +2,8 @@
 
 using namespace data;
 
-choosy_girl::choosy_girl(std::string name_id, int attractiveness, double maintainance_cost,
-           int iq, char criteria)
+choosy_girl::choosy_girl(std::string name_id, int attractiveness, 
+						 double maintainance_cost, int iq, char criteria)
 {
 	this->name_id = name_id;
 	this->attractiveness = attractiveness;
