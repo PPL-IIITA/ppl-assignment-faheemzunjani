@@ -1,4 +1,4 @@
-#include "girl_class.hpp"
+#include "girl.hpp"
 
 using namespace data;
 

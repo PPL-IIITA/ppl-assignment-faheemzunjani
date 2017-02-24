@@ -1,12 +1,12 @@
 #include <cstdio>
 #include <vector>
 #include <string>
-#include "geek_boy_class.hpp"
-#include "generous_boy_class.hpp"
-#include "miser_boy_class.hpp"
-#include "normal_girl_class.hpp"
-#include "desperate_girl_class.hpp"
-#include "choosy_girl_class.hpp"
+#include "geek_boy.hpp"
+#include "generous_boy.hpp"
+#include "miser_boy.hpp"
+#include "normal_girl.hpp"
+#include "desperate_girl.hpp"
+#include "choosy_girl.hpp"
 
 using namespace std;
 using namespace data;

@@ -1,4 +1,4 @@
-#include "choosy_girl_class.hpp"
+#include "choosy_girl.hpp"
 
 using namespace data;
 

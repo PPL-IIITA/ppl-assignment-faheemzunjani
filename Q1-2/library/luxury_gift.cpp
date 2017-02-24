@@ -1,4 +1,4 @@
-#include "luxury_gift_class.hpp"
+#include "luxury_gift.hpp"
 
 using namespace data;
 

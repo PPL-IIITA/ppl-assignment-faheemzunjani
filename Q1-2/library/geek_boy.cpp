@@ -1,4 +1,4 @@
-#include "geek_boy_class.hpp"
+#include "geek_boy.hpp"
 
 using namespace data;
 
