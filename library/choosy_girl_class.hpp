@@ -1,7 +1,7 @@
 #include <string>
 
 namespace data {
-    class girl {
+    class choosy_girl {
         private:
             std::string name_id;
             int attractiveness;
@@ -14,8 +14,8 @@ namespace data {
             std::string commit_to;
 
         public:
-            girl(std::string name_id, int attractiveness, int maintainance_cost,
-                 int iq, char criteria, std::string commit_type);
+           choosy_girl(std::string name_id, int attractiveness, int maintainance_cost,
+                 int iq, char criteria);
             void set_happiness(int happiness);
             void change_status(char status);
             void change_status(char status, std::string commit_to);

@@ -1,9 +1,9 @@
-#include "boy_class.hpp"
+#include "generous_boy_class.hpp"
 
 using namespace data;
 
-boy::boy(std::string name_id, int attractiveness, int min_attractiveness_req,
-		 double budget, int iq, std::string commit_type)
+generous_boy::generous_boy(std::string name_id, int attractiveness, int min_attractiveness_req,
+		 double budget, int iq)
 {
 	this->name_id = name_id;
 	this->attractiveness = attractiveness;
@@ -12,33 +12,33 @@ boy::boy(std::string name_id, int attractiveness, int min_attractiveness_req,
 	this->budget = budget;
 	this->iq = iq;
 	this->status = 's';
-	this->commit_type = commit_type;
+	this->commit_type = "generous";
 	this->commit_to = "none";
 }
 
-double boy::get_budget()
+double generous_boy::get_budget()
 {
 	return this->budget;
 }
 
-void boy::set_happiness(int happiness)
+void generous_boy::set_happiness(int happiness)
 {
 	this->happiness = happiness;
 }
 
-void boy::change_status(char status)
+void generous_boy::change_status(char status)
 {
 	this->status = status;
 	this->commit_to = "none";
 }
 
-void boy::change_status(char status, std::string commit_to)
+void generous_boy::change_status(char status, std::string commit_to)
 {
 	this->status = status;
 	this->commit_to = commit_to;
 }
 
-int boy::can_commit(double maintainance_cost, int attractiveness)
+int generous_boy::can_commit(double maintainance_cost, int attractiveness)
 {
 	if ((maintainance_cost <= this->budget) && 
 		(attractiveness > this->min_attractiveness_req)) {
