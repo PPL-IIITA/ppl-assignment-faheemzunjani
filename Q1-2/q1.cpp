@@ -1,16 +1,15 @@
-#include "./librarytest/utility.hpp"
-#include "./librarytest/algorithms.hpp"
-#include "./librarytest/variables.hpp"
+#include "./library/variables_q1.hpp"
+#include "./library/algorithms.hpp"
+#include "./library/utility.hpp"
 
-int main(int argc, char ** argv)
+using namespace data;
+
+int main()
 {
 	utility::read_boys_data(geek_boys, generous_boys, miser_boys);
 	utility::read_girls_data(normal_girls, choosy_girls, desperate_girls);
-
-	algorithms::make_couples(geek_boys, generous_boys, miser_boys, normal_girls, 
-				 			 choosy_girls, desperate_girls);
-
-	utility::print_couples();
+	algorithms::make_couples(geek_boys, generous_boys, miser_boys, 
+							 normal_girls, choosy_girls, desperate_girls);
 
 	return 0;
 }
