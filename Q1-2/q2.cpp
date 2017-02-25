@@ -9,7 +9,7 @@ int main()
 	printf("1\n");
 	utility::read_couples(couples);
 	printf("%lu\n", couples.size());
-	//algorithms::gifting(couples);
+	algorithms::gifting(couples);
 	//utility::print_k_happiest_couples(couples);
 	//utility::print_k_compatibile_couples(couples);
 
