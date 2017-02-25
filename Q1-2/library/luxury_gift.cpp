@@ -2,12 +2,18 @@
 
 using namespace data;
 
-luxury_gift::luxury_gift(float price, int value, int rating, int difficulty)
+luxury_gift::luxury_gift(std::string name, float price, int value, int rating, int difficulty)
 {
+	this->name = name;
 	this->price = price;
 	this->value = value;
 	this->rating = rating;
 	this->difficulty = difficulty;
+}
+
+std::string luxury_gift::get_name()
+{
+	return this->name;
 }
 
 float luxury_gift::get_price()

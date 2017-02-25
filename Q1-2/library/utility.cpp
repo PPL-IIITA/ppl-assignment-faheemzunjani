@@ -1,5 +1,5 @@
 #include <cstdio>
-#include <fstream>
+#include <string>
 #include "utility.hpp"
 
 using namespace data;
@@ -70,7 +70,7 @@ void utility::read_girls_data(vector <normal_girl> &normal_girls, vector <choosy
 	fclose(fptr);
 }
 
-void utility::read_couples(vector <couple> &couples)
+void utility::read_couples_data(vector <couple> &couples)
 {
 	FILE * couple_file;
 	char name_in[100], type_in[100];
@@ -102,6 +102,52 @@ void utility::read_couples(vector <couple> &couples)
 	couples.pop_back();
 
 	fclose(couple_file);
+}
+
+void utility::read_gifts_data(vector <essential_gift> &essential_gifts,
+							  vector <luxury_gift> &luxury_gifts, vector <utility_gift> &utility_gifts)
+{
+	FILE * fptr;
+	char t_name[5], utility_class[20];
+	std::string name, util_class;
+	int price, value, utility_value, rating, difficulty;
+
+	fptr = fopen("./data/essential_gifts.dat", "r");
+
+	while (!feof(fptr)) {
+		fscanf(fptr, "%s %d %d\n", t_name, &price, &value);
+		name = t_name;
+		essential_gift temp_gift(name, price, value);
+
+		essential_gifts.push_back (temp_gift);
+	}
+
+	fclose(fptr);
+
+	fptr = fopen("./data/luxury_gifts.dat", "r");
+
+	while (!feof(fptr)) {
+		fscanf(fptr, "%s %d %d %d %d\n", t_name, &price, &value, &rating, &difficulty);
+		name = t_name;
+		luxury_gift temp_gift(name, price, value, rating, difficulty);
+
+		luxury_gifts.push_back (temp_gift);
+	}
+
+	fclose(fptr);
+
+	fptr = fopen("./data/utility_gifts.dat", "r");
+
+	while (!feof(fptr)) {
+		fscanf(fptr, "%s %d %d %d %s\n", t_name, &price, &value, &utility_value, utility_class);
+		name = t_name;
+		util_class = utility_class;
+		utility_gift temp_gift(name, price, value, utility_value, util_class);
+
+		utility_gifts.push_back (temp_gift);
+	}
+
+	fclose(fptr);
 }
 
 void utility::print_couples()
