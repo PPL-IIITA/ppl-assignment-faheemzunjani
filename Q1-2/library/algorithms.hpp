@@ -1,3 +1,6 @@
+#ifndef ALGORITHMS_H
+#define ALGORITHMS_H
+
 #include <vector>
 #include "geek_boy.hpp"
 #include "generous_boy.hpp"
@@ -10,8 +13,10 @@ using namespace std;
 using namespace data;
 
 namespace algorithms {
-	void make_couples(vector <geek_boy> geek, 
-					vector <generous_boy> generous, vector <miser_boy> miser,
-					vector <normal_girl> normie, 
-					 vector <choosy_girl> choosy, vector <desperate_girl> despo);
+	void make_couples(vector <geek_boy> &geek, 
+					vector <generous_boy> &generous, vector <miser_boy> &miser,
+					vector <normal_girl> &normie, 
+					 vector <choosy_girl> &choosy, vector <desperate_girl> &despo);
 }
+
+#endif

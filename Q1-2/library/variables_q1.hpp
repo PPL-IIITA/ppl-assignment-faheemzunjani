@@ -1,3 +1,6 @@
+#ifndef VARIABLES_Q1_H
+#define VARIABLES_Q1_H
+
 #include <vector>
 #include "geek_boy.hpp"
 #include "generous_boy.hpp"
@@ -10,6 +13,7 @@
 #include "utility_gift.hpp"
 
 using namespace data;
+using namespace std;
 
 vector <geek_boy> geek_boys; 
 vector <generous_boy> generous_boys; 
@@ -18,3 +22,5 @@ vector <miser_boy> miser_boys;
 vector <normal_girl> normal_girls;
 vector <choosy_girl> choosy_girls;
 vector <desperate_girl> desperate_girls;
+
+#endif

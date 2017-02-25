@@ -1,33 +1,36 @@
-#ifndef CHOOSY_GIRL_H
-#define CHOOSY_GIRL_H
+#ifndef BOY_H
+#define BOY_H
 #include <string>
+#include "geek_boy.hpp"
 
 namespace data {
-    class choosy_girl {
+    class boy {
         private:
             std::string name_id;
             int attractiveness;
+            int min_attractiveness_req;
             int happiness;
-            double maintainance_cost;
+            double budget;
             int iq;
             char status;
-            char criteria;
             std::string commit_type;
             std::string commit_to;
 
         public:
             /* Constructor */
-            choosy_girl(std::string name_id, int attractiveness, 
-                       double maintainance_cost, int iq, char criteria);
-            
+            boy();
+            boy(std::string name_id, int attractiveness, int min_attractiveness_req,
+                double budget, int iq, std::string commit_type, std::string commit_to);
+            void copy(geek_boy &copy_boy);
+
             /* Accessors */
             std::string get_name();
-            double get_maint_cost();
+            double get_budget();
             int get_attract();
+            int get_min_attract_req();
             int get_happiness();
             int get_iq();
             char get_status();
-            char get_criteria();
             std::string get_commit_type();
             std::string get_commit_to();
 
@@ -36,8 +39,8 @@ namespace data {
             void change_status(char status);
             void change_status(char status, std::string commit_to);
 
-            /* Miscellaneous Methods */
-            int can_commit(double budget);
+            /* Miscelleneous Methods */
+            int can_commit(double maintainance_cost, int attractiveness);
     };
 }                
 

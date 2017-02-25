@@ -1,9 +1,10 @@
-#ifndef CHOOSY_GIRL_H
-#define CHOOSY_GIRL_H
+#ifndef GIRL_H
+#define GIRL_H
 #include <string>
+#include "normal_girl.hpp"
 
 namespace data {
-    class choosy_girl {
+    class girl {
         private:
             std::string name_id;
             int attractiveness;
@@ -17,8 +18,11 @@ namespace data {
 
         public:
             /* Constructor */
-            choosy_girl(std::string name_id, int attractiveness, 
-                       double maintainance_cost, int iq, char criteria);
+            girl();
+            girl(std::string name_id, int attractiveness, 
+                double maintainance_cost, int iq, char criteria, 
+                std::string commit_type, std::string commit_to);
+            void copy(normal_girl &copy_girl);
             
             /* Accessors */
             std::string get_name();
