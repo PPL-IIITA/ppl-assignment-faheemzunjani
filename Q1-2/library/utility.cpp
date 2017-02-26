@@ -185,6 +185,31 @@ void utility::print_k_happiest_couples(vector <couple> &couples)
 
 void utility::print_k_compatibile_couples(vector <couple> &couples)
 {
+	vector <couple> temp_couple = couples;
+	int max_comp;
+	int max_j;
+	int j;
+	int k;
 
-	vector <couple> temp_couple;
+	printf("\n\nEnter k for most compatible couples: ");
+	scanf("%d", &k);
+	printf("\n%d most compatible couples:\n\n", k);
+	printf("Boy <-> Girl\n\n");
+
+	for (int i = 0; i < k; i++) {
+		max_comp = 0;
+		max_j = 0;
+
+		for (j = 0; j < temp_couple.size(); j++) {
+			if (temp_couple[j].get_compatibility() > max_comp) {
+				max_comp = temp_couple[j].get_compatibility();
+				max_j = j;
+			}
+		}
+
+		printf("%s <-> %s\n", temp_couple[max_j].cboy.get_name().c_str(),
+						 temp_couple[max_j].cgirl.get_name().c_str());
+
+		temp_couple.erase (temp_couple.begin() + max_j);
+	}
 }

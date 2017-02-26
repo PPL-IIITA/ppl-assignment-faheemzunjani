@@ -12,7 +12,7 @@ int main()
 	algorithms::gifting(couples, essential_gifts, luxury_gifts, utility_gifts);
 	
 	utility::print_k_happiest_couples(couples);
-	//utility::print_k_compatibile_couples(couples);
+	utility::print_k_compatibile_couples(couples);
 
 	return 0;
 }
