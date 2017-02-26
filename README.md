@@ -5,12 +5,13 @@
 <img src="https://img.shields.io/badge/xcode-8.1-blue.svg"/>
 
 ### Contents
-* <a href="#build-details"> Build details </a>
-* <a href="#deployment"> Deployment & Testing </a>
-* <a href="#documentation"> Documentation </a>  
-* <a href="#class-diag"> Class Diagrams </a>
-
-#### <span id="build-details"> Build Details </span>:
+* [Build details](#build-details)
+* [Deployment and Testing](#deployment-and-testing)
+* [Documentation](https://ppl-iiita.github.io/ppl-assignment-faheemzunjani/Q1-2/docs/)
+* [Class Diagrams](#class-diagrams)
+* [Tools Used](#tools-used)
+---
+#### Build Details
 Developed and Tested on:
 * OS: macOS Sierra
 * Distribution: -
@@ -19,7 +20,7 @@ Developed and Tested on:
 * Xcode Version: 8.1 (8B62)
 * Apple LLVM Version: 8.0.0 (clang-800.0.42.1)
 
-#### <span id="build-details"> Deployment & Testing </span>:
+#### Deployment and Testing
 Clone this repository:
 ```
 $ git clone https://github.com/PPL-IIITA/ppl-assignment-faheemzunjani
@@ -57,3 +58,15 @@ $ ./gifts_generator.out
 
 ```
 The randomly generated data files are stored in data/.
+
+#### Documentation
+Documentation is available [here](https://ppl-iiita.github.io/ppl-assignment-faheemzunjani/Q1-2/docs/).  
+
+To manually access documentation offline, all the HTML files of the documentation have been included in docs/ directory. Open docs/index.html in any browser to view the docs.
+
+#### Class Diagrams
+For Q1 and Q2, Class Diagrams are here: https://github.com/PPL-IIITA/ppl-assignment-faheemzunjani/blob/master/Q1-2/Class%20Diagram.pdf
+
+#### Tools Used
+Automatic documentation generation: Doxygen  
+Class diagram generation: Visual paradigm for UML (trial version)
