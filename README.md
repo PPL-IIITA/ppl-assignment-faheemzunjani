@@ -59,7 +59,19 @@ $ g++ gifts_generator.cpp -o gifts_generator.out
 $ ./gifts_generator.out
 
 ```
-The randomly generated data files are stored in data/.
+The randomly generated data files are stored in data/.  
+  
+To view commitments.log file:
+```
+$ cd logs/
+$ cat commitments.log
+```
+
+To view gifting.log file:
+```
+$ cd logs/
+$ cat gifting.log
+```
 
 #### Documentation
 Documentation is available [here](https://ppl-iiita.github.io/ppl-assignment-faheemzunjani/Q1-2/docs/).  
