@@ -176,10 +176,15 @@ void utility::print_k_happiest_couples(vector <couple> &couples)
 			}
 		}
 
-		printf("%s <-> %s\n", temp_couple[max_j].cboy.get_name().c_str(),
+		if (temp_couple.size() != 0) {
+			printf("%s <-> %s\n", temp_couple[max_j].cboy.get_name().c_str(),
 						 temp_couple[max_j].cgirl.get_name().c_str());
 
-		temp_couple.erase (temp_couple.begin() + max_j);
+			temp_couple.erase (temp_couple.begin() + max_j);
+		} else {
+			printf("\nOnly %lu couples present.\n", couples.size());
+			break;
+		}
 	}
 }
 
@@ -207,9 +212,14 @@ void utility::print_k_compatibile_couples(vector <couple> &couples)
 			}
 		}
 
-		printf("%s <-> %s\n", temp_couple[max_j].cboy.get_name().c_str(),
+		if (temp_couple.size() != 0) {
+			printf("%s <-> %s\n", temp_couple[max_j].cboy.get_name().c_str(),
 						 temp_couple[max_j].cgirl.get_name().c_str());
 
-		temp_couple.erase (temp_couple.begin() + max_j);
+			temp_couple.erase (temp_couple.begin() + max_j);
+		} else {
+			printf("\nOnly %lu couples present.\n", couples.size());
+			break;
+		}
 	}
 }
