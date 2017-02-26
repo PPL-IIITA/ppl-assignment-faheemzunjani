@@ -15,12 +15,12 @@
 using namespace data;
 using namespace std;
 
-vector <geek_boy> geek_boys; 
-vector <generous_boy> generous_boys; 
-vector <miser_boy> miser_boys; 
+vector <geek_boy> geek_boys;   /*!< Vector of the couples */
+vector <generous_boy> generous_boys;   /*!< Vector of the couples */
+vector <miser_boy> miser_boys;   /*!< Vector of the couples */
 
-vector <normal_girl> normal_girls;
-vector <choosy_girl> choosy_girls;
-vector <desperate_girl> desperate_girls;
+vector <normal_girl> normal_girls;   /*!< Vector of the couples */
+vector <choosy_girl> choosy_girls;   /*!< Vector of the couples */
+vector <desperate_girl> desperate_girls;    /*!< Vector of the couples */
 
 #endif

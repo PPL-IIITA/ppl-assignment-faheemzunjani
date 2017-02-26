@@ -16,11 +16,32 @@
 using namespace std;
 using namespace data;
 
+//! namespace algorithms contains algorithmic functions
+/*!
+    algorithms namespace contains all the algorithmic functions.
+*/
 namespace algorithms {
+	//! make_couples algorithmic function to form couples from boys and girls
+    /*!
+      \param geek Vector of the geek boys.
+      \param generous Vector of the generous boys.
+      \param miser Vector of the miser boys.
+      \param normie Vector of the normal girls.
+      \param choosy Vector of the choosy girls.
+      \param despo Vector of the desperate girls.
+    */
 	void make_couples(vector <geek_boy> &geek, 
 					vector <generous_boy> &generous, vector <miser_boy> &miser,
 					vector <normal_girl> &normie, 
 					 vector <choosy_girl> &choosy, vector <desperate_girl> &despo);
+	
+	//! gifting algorithmic function to perform gifting between couples by given algorithm
+    /*!
+      \param couples Vector of the couples.
+      \param essential_gifts Vector of the essential gifts.
+      \param luxury_gifts Vector of the luxury gifts.
+      \param utility_gifts Vector of the utility gifts.
+    */
 	void gifting(vector <couple> &couples, vector <essential_gift> &essential_gifts,
 						vector <luxury_gift> &luxury_gifts, vector <utility_gift> &utility_gifts);
 }

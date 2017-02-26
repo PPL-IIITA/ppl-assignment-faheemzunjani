@@ -10,9 +10,9 @@
 using namespace data;
 using namespace std;
 
-vector <couple> couples;
-vector <essential_gift> essential_gifts;
-vector <luxury_gift> luxury_gifts;
-vector <utility_gift> utility_gifts;
+vector <couple> couples;   /*!< Vector of the couples */
+vector <essential_gift> essential_gifts;  /*!< Vector of the essential gifts */
+vector <luxury_gift> luxury_gifts;  /*!< Vector of the luxury gifts */
+vector <utility_gift> utility_gifts;  /*!< Vector of the utility gifts */
 
 #endif
