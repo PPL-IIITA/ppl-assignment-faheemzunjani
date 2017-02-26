@@ -1,18 +1,22 @@
-# Principles of Programming Languages
+# Principles of Programming Languages Assignment
 ## Object Oriented Programming Division
-## Assignment
+<img src="https://img.shields.io/badge/language-c%2B%2B-brightgreen.svg"/>
+<img src="https://img.shields.io/badge/completion-20%25-yellow.svg"/>
+<img src="https://img.shields.io/badge/xcode-8.1-blue.svg"/>
 
-#### Contents
+### Contents
 * <a href="#build-details"> Build details </a>
 * <a href="#deployment"> Deployment & Testing </a>
 * <a href="#documentation"> Documentation </a>  
+* <a href="#class-diag"> Class Diagrams </a>
 
 #### <span id="build-details"> Build Details </span>:
 Developed and Tested on:
 * OS: macOS Sierra
 * Distribution: -
 * Version: 10.12.3
-* g++ Version: g++ linked to clang by XCode
+* g++ Version: g++ linked to clang by Xcode
+* Xcode Version: 8.1 (8B62)
 * Apple LLVM Version: 8.0.0 (clang-800.0.42.1)
 
 #### <span id="build-details"> Deployment & Testing </span>:
