@@ -3,6 +3,10 @@
 #include <string>
 #include "geek_boy.hpp"
 
+//! namespace data contains data items
+/*!
+    data namespace contains all the data items like boy, girl, couple, gift basket, etc
+*/
 namespace data {
     //! Boy class 
     /*!

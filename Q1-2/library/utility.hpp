@@ -16,6 +16,10 @@
 using namespace std;
 using namespace data;
 
+//! namespace utility contains utility functions
+/*!
+    utility namespace contains all the utility functions like file data extractors, etc.
+*/
 namespace utility {
 	//! Read_boys_data utility function to read boys data from boys.dat
     /*!
