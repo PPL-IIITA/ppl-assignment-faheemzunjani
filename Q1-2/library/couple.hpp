@@ -5,6 +5,7 @@
 #include <vector>
 #include "girl.hpp"
 #include "boy.hpp"
+#include "gift_basket.hpp"
 
 namespace data {
 	class couple {
@@ -15,6 +16,7 @@ namespace data {
 		public:
 			boy cboy;
 			girl cgirl;
+			gift_basket gifts;
 
 			/* Constructors */
 			couple(geek_boy &copy_boy, normal_girl &copy_girl);

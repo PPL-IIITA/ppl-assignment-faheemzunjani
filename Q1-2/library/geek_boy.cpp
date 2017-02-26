@@ -94,6 +94,11 @@ void geek_boy::change_status(char status, std::string commit_to)
 	this->commit_to = commit_to;
 }
 
+void geek_boy::change_commit_type(std::string type)
+{
+	this->commit_type = type;
+}
+
 /*Miscelleneous Methods */
 int geek_boy::can_commit(double maintainance_cost, int attractiveness)
 {

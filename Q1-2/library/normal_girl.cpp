@@ -94,6 +94,11 @@ void normal_girl::change_status(char status, std::string commit_to)
 	this->commit_to = commit_to;
 }
 
+void normal_girl::change_commit_type(std::string type)
+{
+	this->commit_type = type;
+}
+
 /* Miscellaneous Methods */
 int normal_girl::can_commit(double budget)
 {

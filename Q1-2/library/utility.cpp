@@ -87,12 +87,14 @@ void utility::read_couples_data(vector <couple> &couples)
 		name = name_in;
 		type = type_in;
 		normal_girl temp_girl(name, attract, maint_cost, intel, crit);
+		temp_girl.change_commit_type(type);
 
 		fscanf(couple_file, "%s %d %d %lf %d %s", name_in, &attract, &min_attract_req, 
 											&budg, &intel, type_in);
 		name = name_in;
 		type = type_in;
 		geek_boy temp_boy(name, attract, min_attract_req, budg, intel);
+		temp_boy.change_commit_type(type);
 		
 		couple temp_couple(temp_boy, temp_girl);
 

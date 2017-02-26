@@ -36,6 +36,7 @@ namespace data {
             void set_happiness(int happiness);
             void change_status(char status);
             void change_status(char status, std::string commit_to);
+            void change_commit_type(std::string type);
 
             /* Miscelleneous Methods */
             int can_commit(double maintainance_cost, int attractiveness);
