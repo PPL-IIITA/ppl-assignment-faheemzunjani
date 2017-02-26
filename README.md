@@ -8,10 +8,9 @@
 * [Build details](#build-details)
 * [Deployment and Testing](#deployment-and-testing)
 * [Documentation](https://ppl-iiita.github.io/ppl-assignment-faheemzunjani/Q1-2/docs/)
-* [Class Diagrams](https://github.com/PPL-IIITA/ppl-assignment-faheemzunjani/blob/master/Q1-2/Class%20Diagram.pdf)
-
-<hr>
-
+* [Class Diagrams](#class-diagrams)
+* [Tools Used](#tools-used)
+---
 #### Build Details
 Developed and Tested on:
 * OS: macOS Sierra
@@ -59,3 +58,15 @@ $ ./gifts_generator.out
 
 ```
 The randomly generated data files are stored in data/.
+
+#### Documentation
+Documentation is available [here](https://ppl-iiita.github.io/ppl-assignment-faheemzunjani/Q1-2/docs/).  
+
+To manually access documentation offline, all the HTML files of the documentation have been included in docs/ directory. Open docs/index.html in any browser to view the docs.
+
+#### Class Diagrams
+For Q1 and Q2, Class Diagrams are here: https://github.com/PPL-IIITA/ppl-assignment-faheemzunjani/blob/master/Q1-2/Class%20Diagram.pdf
+
+#### Tools Used
+Automatic documentation generation: Doxygen  
+Class diagram generation: Visual paradigm for UML (trial version)
