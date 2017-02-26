@@ -152,7 +152,39 @@ void utility::read_gifts_data(vector <essential_gift> &essential_gifts,
 	fclose(fptr);
 }
 
-void utility::print_couples()
+void utility::print_k_happiest_couples(vector <couple> &couples)
+{
+	vector <couple> temp_couple = couples;
+	int max_happ;
+	int max_j;
+	int j;
+	int k;
+
+	printf("\n\nEnter k for happiest couples: ");
+	scanf("%d", &k);
+	printf("\n%d happiest couples:\n\n", k);
+	printf("Boy <-> Girl\n\n");
+
+	for (int i = 0; i < k; i++) {
+		max_happ = 0;
+		max_j = 0;
+
+		for (j = 0; j < temp_couple.size(); j++) {
+			if (temp_couple[j].get_happiness() > max_happ) {
+				max_happ = temp_couple[j].get_happiness();
+				max_j = j;
+			}
+		}
+
+		printf("%s <-> %s\n", temp_couple[max_j].cboy.get_name().c_str(),
+						 temp_couple[max_j].cgirl.get_name().c_str());
+
+		temp_couple.erase (temp_couple.begin() + max_j);
+	}
+}
+
+void utility::print_k_compatibile_couples(vector <couple> &couples)
 {
 
+	vector <couple> temp_couple;
 }

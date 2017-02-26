@@ -36,7 +36,7 @@ namespace data {
             std::string get_commit_to();
 
             /* Mutators */
-            void set_happiness(int happiness);
+            void set_happiness(double gift_cost, int gift_value);
             void change_status(char status);
             void change_status(char status, std::string commit_to);
 

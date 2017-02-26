@@ -29,7 +29,8 @@ namespace utility {
 	void read_gifts_data(vector <essential_gift> &essential_gifts, vector <luxury_gift> &luxury_gifts, 
 						 vector <utility_gift> &utility_gifts);
 
-	void print_couples();
+	void print_k_happiest_couples(vector <couple> &couples);
+	void print_k_compatibile_couples(vector <couple> &couples);
 }
 
 #endif

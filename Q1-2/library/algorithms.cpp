@@ -151,7 +151,7 @@ void algorithms::gifting(vector <couple> &couples, vector <essential_gift> &esse
 
 	fptr = fopen("./logs/gifting.log", "w");
 
-	printf("Gifting:\n");
+	printf("Gifting:\n\n");
 	printf("Couple\tGift-Type Gift-Name Gift-Price\n\n");
 
 	for (int i = 0; i < couples.size(); i++) {
@@ -353,4 +353,9 @@ void algorithms::gifting(vector <couple> &couples, vector <essential_gift> &esse
 	}
 
 	fclose(fptr);
+
+	for (int i = 0; i < couples.size(); i++) {
+		couples[i].set_happiness();
+		couples[i].set_compatibility();
+	}
 }

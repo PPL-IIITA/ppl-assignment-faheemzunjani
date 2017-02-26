@@ -90,9 +90,15 @@ double boy::get_budget()
 }
 
 /* Mutators */
-void boy::set_happiness(int happiness)
+void boy::set_happiness(double gift_cost, int girl_happiness, int girl_iq)
 {
-	this->happiness = happiness;
+	if (this->commit_type == "miser") {
+		this->happiness = (int)(this->budget - gift_cost);
+	} else if (this->commit_type == "generous") {
+		this->happiness = girl_happiness;
+	} else {
+		this->happiness = girl_iq;
+	}
 }
 
 void boy::change_status(char status)

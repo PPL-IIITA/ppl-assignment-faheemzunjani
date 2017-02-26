@@ -1,5 +1,7 @@
 #include "girl.hpp"
+#include <cmath>
 
+using namespace std;
 using namespace data;
 
 /* Constructor */
@@ -91,9 +93,17 @@ double girl::get_maint_cost()
 }
 
 /* Mutators */
-void girl::set_happiness(int happiness)
+void girl::set_happiness(double gift_cost, int gift_value)
 {
-	this->happiness = happiness;
+	if (this->commit_type == "choosy") {
+		this->happiness = (int)log(gift_cost - this->maintainance_cost) 
+						+ (2 * gift_value);
+	} else if (this->commit_type == "normal") {
+		this->happiness = (int)(gift_cost - this->maintainance_cost) 
+						+ gift_value;
+	} else {
+		this->happiness = (int)pow(2, (gift_cost - this->maintainance_cost));
+	}
 }
 
 void girl::change_status(char status)

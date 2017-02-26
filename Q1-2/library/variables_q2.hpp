@@ -14,6 +14,5 @@ vector <couple> couples;
 vector <essential_gift> essential_gifts;
 vector <luxury_gift> luxury_gifts;
 vector <utility_gift> utility_gifts;
-int k;
 
 #endif
