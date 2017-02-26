@@ -16,7 +16,7 @@ void algorithms::make_couples(vector <geek_boy> &geek_boys,
 	struct tm * curtime = localtime ( &_tm );
 	int count = 0;
 
-	fptr = fopen("./logs/events.log", "w");
+	fptr = fopen("./logs/commitments.log", "w");
 	couple_file = fopen("./data/couples.dat", "w");
 
 	printf("Matched Couples:\n");
