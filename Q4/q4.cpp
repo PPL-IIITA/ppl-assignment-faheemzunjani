@@ -18,7 +18,6 @@ int main()
 	
 	algorithms::breakup_least_k_happiest_couples(couples,
 		geek_boys, generous_boys, miser_boys, normal_girls, choosy_girls, desperate_girls);
-	//utility::print_couples(couples);
 
 	return 0;
 }

@@ -369,6 +369,7 @@ void algorithms::breakup_least_k_happiest_couples(vector <couple> couples, vecto
 	int j;
 	int k;
 	FILE * fptr;
+	char temp_string[100];
 
 	fptr = fopen("./logs/newCommitments.log", "w");
 
@@ -480,4 +481,20 @@ void algorithms::breakup_least_k_happiest_couples(vector <couple> couples, vecto
 		}
 	}
 	fclose(fptr);
+
+	printf("\nNew compatible boyfriends to newly single girls:\n\n");
+
+	fptr = fopen("./logs/newCommitments.log", "r");
+
+	int count = 0;
+
+	while(!feof(fptr)) {
+		fscanf(fptr, "%s\n", temp_string);
+		printf("%s\n", temp_string);
+		count++;
+	}
+
+	if (count < k) {
+		printf("No compatible boyfriends in database for other broken up girls.\n");
+	}
 }
