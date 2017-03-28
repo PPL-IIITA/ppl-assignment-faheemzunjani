@@ -44,6 +44,12 @@ namespace algorithms {
     */
 	void gifting(vector <couple> &couples, vector <essential_gift> &essential_gifts,
 						vector <luxury_gift> &luxury_gifts, vector <utility_gift> &utility_gifts);
+
+  void breakup_least_k_happiest_couples(vector <couple> couples, vector <geek_boy> geek_boys, 
+            vector <generous_boy> generous_boys, vector <miser_boy> miser_boys, 
+            vector <normal_girl> normal_girls, vector <choosy_girl> choosy_girls, 
+            vector <desperate_girl> desperate_girls);
+
 }
 
 #endif
