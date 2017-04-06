@@ -54,10 +54,10 @@ namespace algorithms {
       \param choosy Vector of the choosy girls.
       \param despo Vector of the desperate girls.
     */
-  void algorithms::make_couples_q4(vector <geek_boy> &geek_boys, 
+  void make_couples_q4(vector <geek_boy> &geek_boys, 
             vector <generous_boy> &generous_boys, vector <miser_boy> &miser_boys,
             vector <normal_girl> &normal_girls, 
-            vector <choosy_girl> &choosy_girls, vector <desperate_girl> &desperate_girls)
+            vector <choosy_girl> &choosy_girls, vector <desperate_girl> &desperate_girls);
 }
 
 #endif

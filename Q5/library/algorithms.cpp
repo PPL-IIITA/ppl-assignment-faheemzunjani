@@ -176,7 +176,7 @@ void algorithms::make_couples_q4(vector <geek_boy> &geek_boys,
 								miser_boys[j].get_iq(),
 								miser_boys[j].get_commit_type().c_str());
 
-				if (flag = -1) {
+				if (flag == -1) {
 					printf("%s<->%s\n", desperate_girls[i].get_name().c_str(), 
 										miser_boys[j].get_name().c_str());
 				} else {
@@ -218,7 +218,7 @@ void algorithms::make_couples_q4(vector <geek_boy> &geek_boys,
 								geek_boys[j].get_iq(),
 								geek_boys[j].get_commit_type().c_str());
 
-				if (flag = -1) {
+				if (flag == -1) {
 					printf("%s<->%s\n", normal_girls[i].get_name().c_str(), 
 										geek_boys[j].get_name().c_str());
 				} else {
@@ -259,7 +259,7 @@ void algorithms::make_couples_q4(vector <geek_boy> &geek_boys,
 								generous_boys[j].get_iq(),
 								generous_boys[j].get_commit_type().c_str());
 				
-				if (flag = -1) {
+				if (flag == -1) {
 					printf("%s<->%s\n", choosy_girls[i].get_name().c_str(), 
 										generous_boys[j].get_name().c_str());
 				} else {
