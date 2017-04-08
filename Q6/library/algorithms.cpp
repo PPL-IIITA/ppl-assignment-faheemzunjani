@@ -476,11 +476,8 @@ void algorithms::breakup_least_k_happiest_couples(vector <couple> &couples, vect
 							}
 						}
 				}
-			//printf("a\n");
 			couples.erase (couples.begin() + min_j);
-			//printf("c\n");
 			temp_couple.erase (temp_couple.begin() + min_j);
-			//printf("b\n");
 		} else {
 			printf("\nOnly %lu couples present.\n", couples.size());
 			break;
