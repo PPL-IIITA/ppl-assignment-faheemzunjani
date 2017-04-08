@@ -360,10 +360,11 @@ void algorithms::gifting(vector <couple> &couples, vector <essential_gift> &esse
 	}
 }
 
-void algorithms::breakup_least_k_happiest_couples(vector <couple> couples, vector <geek_boy> geek_boys, vector <generous_boy> generous_boys, vector <miser_boy> miser_boys, 
+void algorithms::breakup_least_k_happiest_couples(vector <couple> &couples, vector <geek_boy> geek_boys, vector <generous_boy> generous_boys, vector <miser_boy> miser_boys, 
 				vector <normal_girl> normal_girls, vector <choosy_girl> choosy_girls, vector <desperate_girl> desperate_girls, int t)
 {
 	vector <couple> temp_couple = couples;
+	vector <couple> temp_couples;
 	int min_happ;
 	int min_j;
 	int j;
@@ -413,6 +414,7 @@ void algorithms::breakup_least_k_happiest_couples(vector <couple> couples, vecto
 														  geek_boys[j].get_budget(),
 														  geek_boys[j].get_iq());
 						couple temporary(temp_geek, temp_norm);
+						temp_couples.push_back (temporary);
 
 						fprintf(fptr, "%s<->%s\n", temp_norm.get_name().c_str(), temp_geek.get_name().c_str());
 					}
@@ -439,6 +441,7 @@ void algorithms::breakup_least_k_happiest_couples(vector <couple> couples, vecto
 														  miser_boys[j].get_budget(),
 														  miser_boys[j].get_iq());
 								couple temporary(temp_geek, temp_norm);
+								temp_couples.push_back (temporary);
 
 								fprintf(fptr, "%s<->%s\n", temp_norm.get_name().c_str(), temp_geek.get_name().c_str());
 							}
@@ -466,13 +469,18 @@ void algorithms::breakup_least_k_happiest_couples(vector <couple> couples, vecto
 														  generous_boys[j].get_budget(),
 														  generous_boys[j].get_iq());
 									couple temporary(temp_geek, temp_norm);
+									temp_couples.push_back (temporary);
 
 									fprintf(fptr, "%s<->%s\n", temp_norm.get_name().c_str(), temp_geek.get_name().c_str());
 								}
 							}
 						}
 				}
+			//printf("a\n");
+			couples.erase (couples.begin() + min_j);
+			//printf("c\n");
 			temp_couple.erase (temp_couple.begin() + min_j);
+			//printf("b\n");
 		} else {
 			printf("\nOnly %lu couples present.\n", couples.size());
 			break;
@@ -492,6 +500,11 @@ void algorithms::breakup_least_k_happiest_couples(vector <couple> couples, vecto
 		count++;
 	}
 
+	for (int i = 0; i < temp_couples.size(); ++i)
+	{
+		couples.push_back (temp_couples[i]);
+	}
+
 	if (count < k) {
 		printf("No compatible boyfriends in database for other broken up girls.\n");
 	}
@@ -503,12 +516,17 @@ void algorithms::tdays_gifting_coupling(vector <couple> couples, vector <geek_bo
 {
 	int t;
 
-	printf("Enter t for number of gifting days: \n");
+	printf("\n\nEnter t between 1 and 4 (due to limited database) for number of gifting days: \n");
 	scanf("%d", &t);
 
 	for (int i = 0; i < t; ++i)
 	{
+		printf("\nDay %d:\n", i + 1);
+
 		algorithms::gifting(couples, essential_gifts, luxury_gifts, utility_gifts);
+
+		printf("\nAfter giftings on Day %d: \n", i + 1);
+
 		algorithms::breakup_least_k_happiest_couples(couples, geek_boys, generous_boys, 
 							miser_boys, normal_girls, choosy_girls, desperate_girls, t);
 
