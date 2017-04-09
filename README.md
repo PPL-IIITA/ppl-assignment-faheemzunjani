@@ -26,7 +26,7 @@ Developed and Tested on:
 | *g++ Version* | g++ linked to clang by Xcode |  
 | *Xcode Version* | 8.1 (8B62) |  
 | *Apple LLVM Version* | 8.0.0 (clang-800.0.42.1) |
-| *Documentation Generator* | Doxygen | 
+| *Documentation Generator* | Doxygen |
 
 #### Deployment and Testing
 Clone this repository:
@@ -111,7 +111,8 @@ Documentation for each question is available deployed on gh-pages is available h
 - [Q5](https://ppl-iiita.github.io/ppl-assignment-faheemzunjani/Q5/docs/)
 - [Q6](https://ppl-iiita.github.io/ppl-assignment-faheemzunjani/Q6/docs/)
 
-To manually access documentation offline, all the HTML files of the documentation have been included in docs/ directory. Open docs/index.html in any browser to view the docs.
+To manually access documentation offline, all the HTML files of the documentation have been included in docs/ directory of every question directory.   
+Run any web server in this directory and open docs/index.html in any browser to view the documentation for any question.
 
 #### Class Diagrams
 Class Diagrams are available here:   
