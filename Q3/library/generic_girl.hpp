@@ -5,7 +5,7 @@
 namespace data {
     //! Generic Girl class 
     /*!
-        Generic Girl class which contains attributes to describe a Generic girl. 
+        Generic Girl class which contains attributes to describe a Generic girl and is used as a super class. 
     */
     class generic_girl {
         protected:

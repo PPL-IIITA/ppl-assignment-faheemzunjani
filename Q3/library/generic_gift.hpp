@@ -5,7 +5,7 @@
 namespace data {
 	//! Generic gift class 
     /*!
-        Generic gift class which contains attributes to describe an Generic gift. 
+        Generic gift class which contains attributes to describe an Generic gift and is used as a super class. 
     */
 	class generic_gift {
 		protected:
