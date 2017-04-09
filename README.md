@@ -13,6 +13,7 @@
 * [Deployment and Testing](#deployment-and-testing)
 * [Documentation](https://ppl-iiita.github.io/ppl-assignment-faheemzunjani/Q1-2/docs/)
 * [Class Diagrams](#class-diagrams)
+<<<<<<< HEAD
 * [Tools Used](#tools-used)  
 
 ---
@@ -27,6 +28,19 @@ Developed and Tested on:
 | *Xcode Version* | 8.1 (8B62) |  
 | *Apple LLVM Version* | 8.0.0 (clang-800.0.42.1) |
 | *Documentation Generator* | Doxygen |
+=======
+* [Tools Used](#tools-used)    
+
+---
+#### Build Details
+Developed and Tested on:
+* OS: macOS Sierra
+* Distribution: -
+* Version: 10.12.3
+* g++ Version: g++ linked to clang by Xcode
+* Xcode Version: 8.1 (8B62)
+* Apple LLVM Version: 8.0.0 (clang-800.0.42.1)
+>>>>>>> dd3bfb680cfcc40df089d4fb2a9d300755577604
 
 #### Deployment and Testing
 Clone this repository:
@@ -89,6 +103,7 @@ $ g++ gifts_generator.cpp -o gifts_generator.out
 $ ./gifts_generator.out
 
 ```
+<<<<<<< HEAD
 The randomly generated data files are stored in data/.  
 
 To view commitments.log file:
@@ -125,3 +140,18 @@ Class Diagrams are available here:
 #### Tools Used
 Automatic documentation generation: Doxygen  
 Class diagram generation: Visual Paradigm for UML (trial version)
+=======
+The randomly generated data files are stored in data/.
+
+#### Documentation
+Documentation is available [here](https://ppl-iiita.github.io/ppl-assignment-faheemzunjani/Q1-2/docs/).  
+
+To manually access documentation offline, all the HTML files of the documentation have been included in docs/ directory. Open docs/index.html in any browser to view the docs.
+
+#### Class Diagrams
+For Q1 and Q2, Class Diagrams are here: https://github.com/PPL-IIITA/ppl-assignment-faheemzunjani/blob/master/Q1-2/Class%20Diagram.pdf
+
+#### Tools Used
+Automatic documentation generation: Doxygen  
+Class diagram generation: Visual paradigm for UML (trial version)
+>>>>>>> dd3bfb680cfcc40df089d4fb2a9d300755577604
