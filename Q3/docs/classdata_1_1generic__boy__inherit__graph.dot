@@ -1,0 +1,12 @@
+digraph "data::generic_boy"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node0 [label="data::generic_boy",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node0 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 [label="data::geek_boy",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classdata_1_1geek__boy.html",tooltip="Geek Boy class. "];
+  Node0 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="data::generous_boy",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classdata_1_1generous__boy.html",tooltip="Generous Boy class. "];
+  Node0 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="data::miser_boy",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classdata_1_1miser__boy.html",tooltip="Miser Boy class. "];
+}

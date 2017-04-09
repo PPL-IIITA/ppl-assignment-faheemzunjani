@@ -1,0 +1,26 @@
+digraph "library/gift_basket.hpp"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node7 [label="library/gift_basket.hpp",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node7 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="library/couple.hpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$couple_8hpp.html"];
+  Node8 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="library/algorithms.hpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$algorithms_8hpp.html"];
+  Node9 -> Node10 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="library/algorithms.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$algorithms_8cpp.html"];
+  Node9 -> Node11 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node11 [label="q3.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$q3_8cpp.html"];
+  Node8 -> Node12 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node12 [label="library/couple.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$couple_8cpp.html"];
+  Node8 -> Node13 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node13 [label="library/utility.hpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$utility_8hpp.html"];
+  Node13 -> Node14 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node14 [label="library/utility.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$utility_8cpp.html"];
+  Node13 -> Node11 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 -> Node15 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node15 [label="library/variables_q3.hpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$variables__q3_8hpp.html"];
+  Node15 -> Node11 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 -> Node16 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node16 [label="library/gift_basket.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$gift__basket_8cpp.html"];
+}
