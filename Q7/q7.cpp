@@ -11,12 +11,21 @@ int main()
 	algorithms::make_couples(geek_boys, generous_boys, miser_boys, 
 							 normal_girls, choosy_girls, desperate_girls);
 	utility::read_couples_data(couples);
-	utility::read_gifts_data(essential_gifts, luxury_gifts, utility_gifts);
-
-	algorithms::gifting(couples, essential_gifts, luxury_gifts, utility_gifts);
 	
-	utility::print_k_happiest_couples(couples);
-	utility::print_k_compatibile_couples(couples);
+	algorithms::search_default_couple(couples, "Alfred");
+	algorithms::search_default_couple(couples, "Oliver");
+	algorithms::search_default_couple(couples, "Harvey");
+	algorithms::search_default_couple(couples, "Conail");
+
+	algorithms::search_sorted_couple(couples, "John");
+	algorithms::search_sorted_couple(couples, "Jack");
+	algorithms::search_sorted_couple(couples, "Harvey");
+	algorithms::search_sorted_couple(couples, "Conail");
+
+	algorithms::search_hashed_couple(couples, "Jasper");
+	algorithms::search_hashed_couple(couples, "Oliver");
+	algorithms::search_hashed_couple(couples, "Balthazar");
+	algorithms::search_hashed_couple(couples, "Conail");
 
 	return 0;
 }
