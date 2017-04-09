@@ -151,7 +151,7 @@ void algorithms::gifting(vector <couple> &couples, vector <essential_gift> &esse
 
 	fptr = fopen("./logs/gifting.log", "w");
 
-	printf("Gifting:\n\n");
+	printf("\nGifting:\n\n");
 	printf("Couple\tGift-Type Gift-Name Gift-Price\n\n");
 
 	for (int i = 0; i < couples.size(); i++) {
@@ -360,3 +360,172 @@ void algorithms::gifting(vector <couple> &couples, vector <essential_gift> &esse
 	}
 }
 
+void algorithms::breakup_least_k_happiest_couples(vector <couple> &couples, vector <geek_boy> geek_boys, vector <generous_boy> generous_boys, vector <miser_boy> miser_boys, 
+				vector <normal_girl> normal_girls, vector <choosy_girl> choosy_girls, vector <desperate_girl> desperate_girls, int t)
+{
+	vector <couple> temp_couple = couples;
+	vector <couple> temp_couples;
+	int min_happ;
+	int min_j;
+	int j;
+	int k = t;
+	FILE * fptr;
+	char temp_string[100];
+
+	fptr = fopen("./logs/newCommitments.log", "w");
+
+	printf("\n%d Breakups:\n\n", k);
+	printf("Boy -/- Girl\n\n");
+
+	for (int i = 0; i < k; i++) {
+		min_happ = 59000;
+		min_j = 0;
+
+		for (j = 0; j < temp_couple.size(); j++) {
+			if (temp_couple[j].get_happiness() < min_happ) {
+				min_happ = temp_couple[j].get_happiness();
+				min_j = j;
+			}
+		}
+
+		if (temp_couple.size() != 0) {
+			printf("%s -/- %s\n", temp_couple[min_j].cboy.get_name().c_str(),
+						 temp_couple[min_j].cgirl.get_name().c_str());
+
+			if (temp_couple[min_j].cgirl.get_commit_type() == "normal") {
+				for (int j = 0; j < geek_boys.size(); j++) {
+					if (temp_couple[min_j].cgirl.can_commit(geek_boys[j].get_budget()) && 
+						geek_boys[j].can_commit(temp_couple[min_j].cgirl.get_maint_cost(), temp_couple[min_j].cgirl.get_attract()) 
+						&& geek_boys[j].get_status() == 's' && temp_couple[min_j].cgirl.get_status() == 's'
+						&& geek_boys[j].get_name() != temp_couple[min_j].cboy.get_name()) {
+
+						temp_couple[min_j].cgirl.change_status('c', geek_boys[j].get_name().c_str());
+						geek_boys[j].change_status('c', temp_couple[min_j].cgirl.get_name().c_str());
+
+						normal_girl temp_norm(temp_couple[min_j].cgirl.get_name().c_str(),
+																temp_couple[min_j].cgirl.get_attract(),
+																temp_couple[min_j].cgirl.get_maint_cost(),
+																temp_couple[min_j].cgirl.get_iq(),
+																temp_couple[min_j].cgirl.get_criteria());
+
+						geek_boy temp_geek(geek_boys[j].get_name().c_str(),
+														  geek_boys[j].get_attract(),
+														  geek_boys[j].get_min_attract_req(),
+														  geek_boys[j].get_budget(),
+														  geek_boys[j].get_iq());
+						couple temporary(temp_geek, temp_norm);
+						temp_couples.push_back (temporary);
+
+						fprintf(fptr, "%s<->%s\n", temp_norm.get_name().c_str(), temp_geek.get_name().c_str());
+					}
+				}
+			} else if (temp_couple[min_j].cgirl.get_commit_type() == "desperate") {
+						for (int j = 0; j < miser_boys.size(); j++) {
+							if (temp_couple[min_j].cgirl.can_commit(miser_boys[j].get_budget()) && 
+								miser_boys[j].can_commit(temp_couple[min_j].cgirl.get_maint_cost(), temp_couple[min_j].cgirl.get_attract()) 
+								&& miser_boys[j].get_status() == 's' && temp_couple[min_j].cgirl.get_status() == 's'
+								&& miser_boys[j].get_name() != temp_couple[min_j].cboy.get_name()) {
+
+								temp_couple[min_j].cgirl.change_status('c', miser_boys[j].get_name().c_str());
+								miser_boys[j].change_status('c', temp_couple[min_j].cgirl.get_name().c_str());
+
+								normal_girl temp_norm(temp_couple[min_j].cgirl.get_name().c_str(),
+																temp_couple[min_j].cgirl.get_attract(),
+																temp_couple[min_j].cgirl.get_maint_cost(),
+																temp_couple[min_j].cgirl.get_iq(),
+																temp_couple[min_j].cgirl.get_criteria());
+
+								geek_boy temp_geek(miser_boys[j].get_name().c_str(),
+														  miser_boys[j].get_attract(),
+														  miser_boys[j].get_min_attract_req(),
+														  miser_boys[j].get_budget(),
+														  miser_boys[j].get_iq());
+								couple temporary(temp_geek, temp_norm);
+								temp_couples.push_back (temporary);
+
+								fprintf(fptr, "%s<->%s\n", temp_norm.get_name().c_str(), temp_geek.get_name().c_str());
+							}
+						}
+				} else {
+						if (temp_couple[min_j].cgirl.get_commit_type() == "choosy") {
+							for (int j = 0; j < generous_boys.size(); j++) {
+								if (temp_couple[min_j].cgirl.can_commit(generous_boys[j].get_budget()) && 
+									generous_boys[j].can_commit(temp_couple[min_j].cgirl.get_maint_cost(), temp_couple[min_j].cgirl.get_attract()) 
+									&& generous_boys[j].get_status() == 's' && temp_couple[min_j].cgirl.get_status() == 's'
+									&& generous_boys[j].get_name() != temp_couple[min_j].cboy.get_name()) {
+
+									temp_couple[min_j].cgirl.change_status('c', generous_boys[j].get_name().c_str());
+									generous_boys[j].change_status('c', temp_couple[min_j].cgirl.get_name().c_str());
+
+									normal_girl temp_norm(temp_couple[min_j].cgirl.get_name().c_str(),
+																temp_couple[min_j].cgirl.get_attract(),
+																temp_couple[min_j].cgirl.get_maint_cost(),
+																temp_couple[min_j].cgirl.get_iq(),
+																temp_couple[min_j].cgirl.get_criteria());
+
+									geek_boy temp_geek(generous_boys[j].get_name().c_str(),
+														  generous_boys[j].get_attract(),
+														  generous_boys[j].get_min_attract_req(),
+														  generous_boys[j].get_budget(),
+														  generous_boys[j].get_iq());
+									couple temporary(temp_geek, temp_norm);
+									temp_couples.push_back (temporary);
+
+									fprintf(fptr, "%s<->%s\n", temp_norm.get_name().c_str(), temp_geek.get_name().c_str());
+								}
+							}
+						}
+				}
+			couples.erase (couples.begin() + min_j);
+			temp_couple.erase (temp_couple.begin() + min_j);
+		} else {
+			printf("\nOnly %lu couples present.\n", couples.size());
+			break;
+		}
+	}
+	fclose(fptr);
+
+	printf("\nNew compatible boyfriends to newly single girls:\n\n");
+
+	fptr = fopen("./logs/newCommitments.log", "r");
+
+	int count = 0;
+
+	while(!feof(fptr)) {
+		fscanf(fptr, "%s\n", temp_string);
+		printf("%s\n", temp_string);
+		count++;
+	}
+
+	for (int i = 0; i < temp_couples.size(); ++i)
+	{
+		couples.push_back (temp_couples[i]);
+	}
+
+	if (count < k) {
+		printf("No compatible boyfriends in database for other broken up girls.\n");
+	}
+}
+
+void algorithms::tdays_gifting_coupling(vector <couple> couples, vector <geek_boy> geek_boys, vector <generous_boy> generous_boys, vector <miser_boy> miser_boys, 
+							vector <normal_girl> normal_girls, vector <choosy_girl> choosy_girls, vector <desperate_girl> desperate_girls,
+							vector <essential_gift> essential_gifts, vector <luxury_gift> luxury_gifts, vector <utility_gift> utility_gifts)
+{
+	int t;
+
+	printf("\n\nEnter t between 1 and 4 (due to limited database) for number of gifting days: \n");
+	scanf("%d", &t);
+
+	for (int i = 0; i < t; ++i)
+	{
+		printf("\nDay %d:\n", i + 1);
+
+		algorithms::gifting(couples, essential_gifts, luxury_gifts, utility_gifts);
+
+		printf("\nAfter giftings on Day %d: \n", i + 1);
+
+		algorithms::breakup_least_k_happiest_couples(couples, geek_boys, generous_boys, 
+							miser_boys, normal_girls, choosy_girls, desperate_girls, t);
+
+	}
+}
