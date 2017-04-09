@@ -25,7 +25,8 @@ Developed and Tested on:
 | *Version* | 10.12.3 |
 | *g++ Version* | g++ linked to clang by Xcode |  
 | *Xcode Version* | 8.1 (8B62) |  
-| *Apple LLVM Version* | 8.0.0 (clang-800.0.42.1) |  
+| *Apple LLVM Version* | 8.0.0 (clang-800.0.42.1) |
+| *Documentation Generator* | Doxygen | 
 
 #### Deployment and Testing
 Clone this repository:
