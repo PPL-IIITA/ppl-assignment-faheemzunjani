@@ -1,17 +1,12 @@
 # Principles of Programming Languages Assignment
-<<<<<<< Updated upstream
+
 ## Object Oriented Programming Division  
 ### Faheem Hassan Zunjani - IIT2015113
-<img src="https://img.shields.io/badge/language-c%2B%2B-brightgreen.svg"/>
-<img src="https://img.shields.io/badge/completion-20%25-yellow.svg"/>
-<img src="https://img.shields.io/badge/xcode-8.1-blue.svg"/>  
-=======
-## Object Oriented Programming Division
+
 <span><img src="https://img.shields.io/badge/language-c%2B%2B-brightgreen.svg"/></span>
 <span><img src="https://img.shields.io/badge/completion-58.33%25-yellow.svg"/></span>
 <span><img src="https://img.shields.io/badge/xcode-8.1-blue.svg"/></span>
 <span><img src="https://img.shields.io/badge/documentation-Doxygen-red.svg"/></span>
->>>>>>> Stashed changes
 
 ### Contents
 * [Build details](#build-details)
