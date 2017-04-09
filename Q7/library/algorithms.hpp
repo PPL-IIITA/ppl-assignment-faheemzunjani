@@ -77,6 +77,26 @@ namespace algorithms {
               vector <normal_girl> normal_girls, vector <choosy_girl> choosy_girls, vector <desperate_girl> desperate_girls,
               vector <essential_gift> essential_gifts, vector <luxury_gift> luxury_gifts, vector <utility_gift> utility_gifts);
 
+  //! search_default_couple is default algorithmic function to search for the name of the girlfriend for a given boy.
+    /*!
+      \param couples Vector of the couples.
+      \param boy_name Name of the boy to search for.
+    */
+  void search_default_couple(vector <couple> couples, string boy_name);
+
+  //! search_default_couple is an algorithmic function to search for the name of the girlfriend for a given boy using Binary Search on sorted array.
+    /*!
+      \param couples Vector of the couples.
+      \param boy_name Name of the boy to search for.
+    */
+  void search_sorted_couple(vector <couple> &couples, string boy_name);
+
+  //! search_hashed_couple is an algorithmic function to search for the name of the girlfriend for a given boy using Hash Tables.
+    /*!
+      \param couples Vector of the couples.
+      \param boy_name Name of the boy to search for.
+    */
+  void search_hashed_couple(vector <couple> couples, string boy_name);
 }
 
 #endif

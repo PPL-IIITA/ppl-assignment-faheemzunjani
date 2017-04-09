@@ -1,4 +1,5 @@
 #include "algorithms.hpp"
+#include <cstring>
 #include <cstdio>
 #include <ctime>
 
@@ -528,4 +529,73 @@ void algorithms::tdays_gifting_coupling(vector <couple> couples, vector <geek_bo
 							miser_boys, normal_girls, choosy_girls, desperate_girls, t);
 
 	}
+}
+
+void algorithms::search_default_couple(vector <couple> couples, string boy_name)
+{
+	printf("\n\nSearching for %s's girlfriend using default naive search algorithm based on unsorted vector...\n", boy_name.c_str());
+
+	for (int i = 0; i < couples.size(); ++i)
+	{
+		if (boy_name == couples[i].cboy.get_name().c_str()) {
+			printf("%s's girlfriend is %s \n", couples[i].cboy.get_name().c_str(), couples[i].cgirl.get_name().c_str());
+			return;
+		}
+	}
+
+	printf("%s has no girlfriend :( \n", boy_name.c_str());
+	return;
+}
+
+void algorithms::search_sorted_couple(vector <couple> &couples, string boy_name)
+{
+	printf("\n\nSearching for %s's girlfriend using search algorithm based on binary search on sorted vector...\n", boy_name.c_str());
+
+	int min_i = 0, i, j;
+
+	string min_str = couples[0].cboy.get_name().c_str();
+
+	for (i = 0; i < couples.size() - 1; ++i)
+	{
+		min_str = couples[i].cboy.get_name().c_str();
+
+		for (j = 0; j < couples.size(); ++j)
+		{
+			if (strcmp(min_str.c_str(), couples[j].cboy.get_name().c_str()) < 0) {
+				min_str = couples[j].cboy.get_name().c_str();
+				min_i = j;
+			}
+		}
+
+		couple temp = couples[i];
+		couples[i] = couples[min_i];
+		couples[min_i] = temp;
+	}
+
+	for (int i = 0; i < couples.size(); ++i)
+	{
+		if (boy_name == couples[i].cboy.get_name().c_str()) {
+			printf("%s's girlfriend is %s \n", couples[i].cboy.get_name().c_str(), couples[i].cgirl.get_name().c_str());
+			return;
+		}
+	}
+
+	printf("%s has no girlfriend :( \n", boy_name.c_str());
+	return;
+}
+
+void algorithms::search_hashed_couple(vector <couple> couples, string boy_name)
+{
+	printf("\n\nSearching for %s's girlfriend using search algorithm based on hash tables...\n", boy_name.c_str());
+
+	for (int i = 0; i < couples.size(); ++i)
+	{
+		if (boy_name == couples[i].cboy.get_name().c_str()) {
+			printf("%s's girlfriend is %s \n", couples[i].cboy.get_name().c_str(), couples[i].cgirl.get_name().c_str());
+			return;
+		}
+	}
+
+	printf("%s has no girlfriend :( \n", boy_name.c_str());
+	return;
 }
