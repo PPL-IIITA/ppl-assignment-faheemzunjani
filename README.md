@@ -87,6 +87,12 @@ $ cd Q7
 $ g++ q7.cpp ./library/*.cpp -o q7.out
 $ ./q7.out
 ```
+  
+To run and test Q11:
+```
+$ cd Q11
+```
+Open "How to build.md" file and read how to build and test driver files for each exception.
 
 Randomly generated gift data files have been included in data/ as essential_gifts.dat, luxury_gifts.dat and utility_gifts.dat for each kind of gift.  
 
@@ -119,6 +125,7 @@ Documentation for each question is available deployed on gh-pages is available h
 - [Q5](https://ppl-iiita.github.io/ppl-assignment-faheemzunjani/Q5/docs/)
 - [Q6](https://ppl-iiita.github.io/ppl-assignment-faheemzunjani/Q6/docs/)
 - [Q7](https://ppl-iiita.github.io/ppl-assignment-faheemzunjani/Q7/docs/)
+- [Q11](https://ppl-iiita.github.io/ppl-assignment-faheemzunjani/Q11/docs/)
 
 To manually access documentation offline, all the HTML files of the documentation have been included in docs/ directory of every question directory.   
 Run any web server in this directory and open docs/index.html in any browser to view the documentation for any question.
@@ -131,6 +138,7 @@ Class Diagrams are available here:
 - [Q5](https://github.com/PPL-IIITA/ppl-assignment-faheemzunjani/blob/master/Q5/Class%20Diagram.pdf)
 - [Q6](https://github.com/PPL-IIITA/ppl-assignment-faheemzunjani/blob/master/Q6/Class%20Diagram.pdf)
 - [Q7](https://github.com/PPL-IIITA/ppl-assignment-faheemzunjani/blob/master/Q7/Class%20Diagram.pdf)
+- [Q11](https://github.com/PPL-IIITA/ppl-assignment-faheemzunjani/blob/master/Q11/Class%20Diagram.pdf)
 
 #### Tools Used
 Automatic documentation generation: Doxygen  
