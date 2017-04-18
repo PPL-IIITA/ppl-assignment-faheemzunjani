@@ -566,6 +566,9 @@ void algorithms::make_couples_q4(vector <geek_boy> &geek_boys,
 	flag = -1;
 
 	for (int i = 0; i < desperate_girls.size(); i++) {
+		int compatible_flag = 0;
+
+		try {
 		for (int j = 0; j < miser_boys.size(); j++) {
 			if (desperate_girls[i].can_commit(miser_boys[j].get_budget()) && 
 				miser_boys[j].can_commit(desperate_girls[i].get_maint_cost(), desperate_girls[i].get_attract()) 
@@ -600,14 +603,25 @@ void algorithms::make_couples_q4(vector <geek_boy> &geek_boys,
 					printf("%s<->%s\n", miser_boys[j].get_name().c_str(),
 										desperate_girls[i].get_name().c_str());
 				}
-
+				compatible_flag = 1;
 				flag *= -1;
 
 			}
 		}
+		if (compatible_flag == 0) {
+			make_couple_exception e(choosy_girls[i].get_name());
+			throw e;
+		}
+
+		} catch(make_couple_exception &e) {
+			e.message();
+		}
 	}
 
 	for (int i = 0; i < normal_girls.size(); i++) {
+		int compatible_flag = 0;
+
+		try {
 		for (int j = 0; j < geek_boys.size(); j++) {
 			if (normal_girls[i].can_commit(geek_boys[j].get_budget()) && 
 				geek_boys[j].can_commit(normal_girls[i].get_maint_cost(), normal_girls[i].get_attract()) 
@@ -642,13 +656,24 @@ void algorithms::make_couples_q4(vector <geek_boy> &geek_boys,
 					printf("%s<->%s\n", geek_boys[j].get_name().c_str(),
 										normal_girls[i].get_name().c_str());
 				}
-
+				compatible_flag = 1;
 				flag *= -1;
 			}
+		}
+		if (compatible_flag == 0) {
+			make_couple_exception e(choosy_girls[i].get_name());
+			throw e;
+		}
+
+		} catch(make_couple_exception &e) {
+			e.message();
 		}
 	}
 
 	for (int i = 0; i < choosy_girls.size(); i++) {
+		int compatible_flag = 0;
+
+		try {
 		for (int j = 0; j < generous_boys.size(); j++) {
 			if (choosy_girls[i].can_commit(generous_boys[j].get_budget()) && 
 				generous_boys[j].can_commit(choosy_girls[i].get_maint_cost(), choosy_girls[i].get_attract()) 
@@ -683,9 +708,17 @@ void algorithms::make_couples_q4(vector <geek_boy> &geek_boys,
 					printf("%s<->%s\n", generous_boys[j].get_name().c_str(),
 										choosy_girls[i].get_name().c_str());
 				}
-
+				compatible_flag = 1;
 				flag *= -1;
 			}
+		}
+		if (compatible_flag == 0) {
+			make_couple_exception e(choosy_girls[i].get_name());
+			throw e;
+		}
+
+		} catch(make_couple_exception &e) {
+			e.message();
 		}
 	}
 
@@ -697,10 +730,20 @@ void algorithms::tdays_gifting_coupling(vector <couple> couples, vector <geek_bo
 							vector <normal_girl> normal_girls, vector <choosy_girl> choosy_girls, vector <desperate_girl> desperate_girls,
 							vector <essential_gift> essential_gifts, vector <luxury_gift> luxury_gifts, vector <utility_gift> utility_gifts)
 {
-	int t;
+	int t = -1;
 
-	printf("\n\nEnter t between 1 and 4 (due to limited database) for number of gifting days: \n");
-	scanf("%d", &t);
+	while (t < 1 || t > 4) {
+		try {
+			printf("\n\nEnter t for number of gifting days: \n");
+			scanf("%d", &t);
+			if (t < 1 || t > 4) {
+				tdays_limit_exception e;
+				throw e;
+			}
+		} catch(tdays_limit_exception &e) {
+			e.message();
+		}
+	}
 
 	for (int i = 0; i < t; ++i)
 	{

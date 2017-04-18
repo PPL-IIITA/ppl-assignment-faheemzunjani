@@ -55,6 +55,16 @@ namespace exceptions {
 		void compatible_message();
 	};
 
+	//! tdays_limit_exception class 
+    /*!
+        tdays_limit_exception class which handles exceptions in tdays_gifting algorithm
+    */
+	class tdays_limit_exception
+	{
+	public:
+		//! Message method of the class which prints the error message when t is more than 4 or less than 1
+		void message();
+	};
 }
 
 

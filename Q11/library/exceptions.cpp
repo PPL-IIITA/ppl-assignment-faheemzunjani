@@ -24,3 +24,8 @@ void breakup_too_few_exception::compatible_message()
 {
 	printf("No compatible boyfriends in database for other broken up girls.\n");
 }
+
+void tdays_limit_exception::message()
+{
+	printf("t-days limit exceeded. Please enter a t between 1 and 4.\n");
+}
