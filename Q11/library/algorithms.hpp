@@ -34,6 +34,21 @@ namespace algorithms {
 					vector <generous_boy> &generous, vector <miser_boy> &miser,
 					vector <normal_girl> &normie, 
 					 vector <choosy_girl> &choosy, vector <desperate_girl> &despo);
+
+  //! make_couples algorithmic function to form couples according to Q4 from boys and girls
+    /*!
+      \param geek Vector of the geek boys.
+      \param generous Vector of the generous boys.
+      \param miser Vector of the miser boys.
+      \param normie Vector of the normal girls.
+      \param choosy Vector of the choosy girls.
+      \param despo Vector of the desperate girls.
+    */
+  void make_couples_q4(vector <geek_boy> &geek_boys, 
+            vector <generous_boy> &generous_boys, vector <miser_boy> &miser_boys,
+            vector <normal_girl> &normal_girls, 
+            vector <choosy_girl> &choosy_girls, vector <desperate_girl> &desperate_girls);
+  
 	
 	//! gifting algorithmic function to perform gifting between couples by given algorithm
     /*!
@@ -55,10 +70,10 @@ namespace algorithms {
       \param choosy Vector of the choosy girls.
       \param despo Vector of the desperate girls.
     */
-  void breakup_least_k_happiest_couples(vector <couple> &couples, vector <geek_boy> geek_boys, 
+  void breakup_least_k_happiest_couples(vector <couple> couples, vector <geek_boy> geek_boys, 
             vector <generous_boy> generous_boys, vector <miser_boy> miser_boys, 
             vector <normal_girl> normal_girls, vector <choosy_girl> choosy_girls, 
-            vector <desperate_girl> desperate_girls, int k);
+            vector <desperate_girl> desperate_girls);
 
   //! tdays_gifting_coupling algorithmic function to perform gifting on t days and perform corresponding new breakups and commitments accordingly.
     /*!

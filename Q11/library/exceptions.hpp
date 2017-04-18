@@ -45,19 +45,14 @@ namespace exceptions {
     /*!
         breakup_exception class which handles exceptions in breakup_least_k_happiest_couples algorithm
     */
-	class breakup_exception
+	class breakup_too_few_exception
 	{
 	public:
-		string name; /*!< Name of the girl */
-
-		//! Parameterised breakup_exception constructor
-            /*!
-              \param message Error message to be displayed
-            */
-		breakup_exception(string girl_name);
-
-		//! Message method of the class which prints the error message with the girl's name
+		//! Message method of the class which prints the error message when there are fewer than k couples to break up
 		void message();
+
+		//! Message method of the class which prints the error message when there are no more compatible boyfriends for newly single girls in the database
+		void compatible_message();
 	};
 
 }
